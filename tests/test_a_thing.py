@@ -24,6 +24,7 @@ def postgres_conn(ip, port):
         conn.close()
         return True
     except:
+        # don't raise an exception here - it will cause docker_services to fail
         return False
 
 
